@@ -1,8 +1,9 @@
 name: i18n - Build Validation
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch
+  # push:
+  #   branches:
+  #     - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.event.workflow_run.head_branch || github.ref }}
