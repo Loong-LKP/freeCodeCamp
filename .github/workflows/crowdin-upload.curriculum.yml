@@ -1,6 +1,6 @@
 name: i18n - Upload Curriculum
 on:
-  workflow_dispatch:
+  workflow_dispatch
   # schedule:
   #   # runs every weekday at 7:30 AM UTC
   #   - cron: '30 7 * * 1-5'
