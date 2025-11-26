@@ -1,14 +1,15 @@
 name: CI - Node.js
 
 on:
-  push:
-    branches:
-      - 'main'
-      - 'prod-**'
-  pull_request:
-    branches:
-      - 'main'
-      - 'temp-**' # Temporary branches allowed on Upstream
+  workflow_dispatch
+  # push:
+  #   branches:
+  #     - 'main'
+  #     - 'prod-**'
+  # pull_request:
+  #   branches:
+  #     - 'main'
+  #     - 'temp-**' # Temporary branches allowed on Upstream
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.event.workflow_run.head_branch || github.ref }}
